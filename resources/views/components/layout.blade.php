@@ -17,21 +17,27 @@
                     colors: {
                         laravel: "#ef3b2d",
                     },
+                    minWidth: {
+                        'sml': '340px',
+                    },
                 },
-            },
-        };
+            }
+    }
     </script>
+
     <title>UnderTasking</title>
 </head>
-<body>
-    <header>
-        Heading
-    </header>
-
+<body class="min-w-sml">
+    <nav class="flex text-center pb-4 border">
+        <a class="flex-1">Current User</a> 
+        <h1 class="flex-1 text-2xl">UnderTasking</h1> 
+        <form class="flex-1">Search</form>
+    </nav>
     {{ $slot }}
-
     <footer>
-        Footing
+        Archive | tools | Create task
     </footer>
+
+    
 </body>
 </html>
