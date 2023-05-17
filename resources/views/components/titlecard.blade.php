@@ -1,3 +1,5 @@
-<h1 {{$attributes->merge(['class' => 'text-lg text-center rounded shadow-md lg:mx-6 lg:my-2 lg:border'])}}>
+<div {{$attributes->merge(['class' => 'text-lg flex items-center justify-center rounded shadow-md w-full h-12'])}}>
+    <p class="pointer-events-none">
     {{$slot}}
-</h1>
+    </p>
+</div>

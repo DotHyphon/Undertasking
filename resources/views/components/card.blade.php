@@ -1,3 +1,3 @@
-<div class="shadow-lg p-6 w-full" id="{{$id}}">
+<div {{$attributes->merge(['class' => "shadow-lg w-full p-2 border", 'id'=>""])}}>
     {{$slot}}
 </div>

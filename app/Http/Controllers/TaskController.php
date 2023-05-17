@@ -10,7 +10,7 @@ class TaskController extends Controller
     public function index()
     {
         return view('tasks.index', [
-            'tasks' => Task::orderBy('due_date', 'asc')->get()
+            'tasks' => Task::orderBy('due_date', 'asc')->filter(request(['search']))->get()
         ]);
     }
 }
