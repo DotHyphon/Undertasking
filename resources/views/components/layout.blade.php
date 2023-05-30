@@ -28,17 +28,21 @@
     <title>UnderTasking</title>
 </head>
 <body class="min-w-sml">
-    <nav class="flex text-center items-center justify-center py-4 border">
-        <a href='/user' class="flex-1">Current User</a> 
-        <a href='/' class="flex-1 text-2xl">UnderTasking</a> 
-        <form action='/' class="flex-1">
+    <nav class="flex text-center items-center justify-start py-1 border">
+        <a href='/user' class="mx-4"><i class="fas fa-user"></i></a> 
+        {{-- <a href='/' class="flex-1 text-2xl">UnderTasking</a>  --}}
+        <form action='/' class="mx-2">
             <i class="fas fa-search"></i>
-            <input class="w-12" type="text" name="search" placeholder="Search..." value="{{request('search')}}">
+            <input class="" type="text" name="search" placeholder="Search..." value="{{request('search')}}">
         </form>
     </nav>
     {{ $slot }}
     <footer class="fixed flex justify-center align-center items-center bottom-0 left-0 w-full bg-gray-200 p-4">
-        <p><a href='/'>Archive</a> | <a href='/'>tools</a> | <a href="">Create task</a></p>
+        <a href='/'><i class="fas fa-home"></i>Dashboard</a>
+        <span class="px-3"> | </span> 
+        <a href='/'><i class="fas fa-archive"></i>Archive</a>
+        <span class="px-3"> | </span> 
+        <a href='/'><i class="fas fa-plus-circle"></i>Create Task</a>
     </footer>
 
     

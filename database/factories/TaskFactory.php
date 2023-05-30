@@ -22,7 +22,7 @@ class TaskFactory extends Factory
             'description' => $this->faker->realText(200),
             'subtasks' => json_encode(['subtask 1' => $this->faker->word, 'subtask 2' => $this->faker->word, 'subtask 3'  => $this->faker->word]),
             'due_date' => $this->faker->dateTimeBetween('-1 day', '+4 day'),
-            'completed' => $this->faker->boolean(20),
+            'completed' => $this->faker->boolean(10),
             'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
     }
